@@ -1,0 +1,52 @@
+{
+  "name": "audib5",
+  "description": "2001 Audi A4/B5 Repair",
+  "type": "static",
+  "headers": null,
+  "redirects": null,
+  "environment": null,
+  "regions": [
+    "us-west-2"
+  ],
+  "profile": "",
+  "inject": null,
+  "lambda": {
+    "memory": 512,
+    "timeout": 0,
+    "role": ""
+  },
+  "cors": null,
+  "error_pages": {
+    "disable": false,
+    "dir": ".",
+    "variables": null
+  },
+  "proxy": {
+    "command": "./server",
+    "backoff": {
+      "min": 100,
+      "max": 500,
+      "factor": 2,
+      "attempts": 3,
+      "jitter": false
+    },
+    "retry": null,
+    "timeout": 15,
+    "listen_timeout": 15,
+    "shutdown_timeout": 15
+  },
+  "static": {
+    "dir": "public"
+  },
+  "logs": {
+    "disable": false
+  },
+  "stages": {
+    "development": null,
+    "staging": null,
+    "production": null
+  },
+  "dns": {
+    "zones": null
+  }
+}
